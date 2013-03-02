@@ -18,7 +18,7 @@ class exports.Lisp
     if ctx.atom([sexpr])
       ctx[sexpr] ? sexpr
     else if fn is \lambda
-      (...params) ~> @apply(args[1], ctx <<< hsh(zip(args[0], params)))
+      (...params) ~> @apply(args[1], ctx with hsh(zip(args[0], params)))
     else
       args = [@eval(a, ctx) for a in args]  if fn not in <[ label if quote ]>
       @apply ctx[fn], args, ctx
