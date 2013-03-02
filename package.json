@@ -1,0 +1,17 @@
+{
+  "name": "ls-lisp",
+  "version": "0.0.1-alpha",
+  "description": "A micro LISP implementation in 27 lines of LiveScript.",
+  "main": "lisp.js",
+  "dependencies": {
+    "LiveScript": "~1.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha",
+    "preinstall": "lsc -co . src"
+  },
+  "repository": "https://github.com/isakb/ls-lisp.git",
+  "author": "Isak Bakken",
+  "license": "MIT"
+}
